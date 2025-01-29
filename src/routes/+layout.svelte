@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { children } = $props();
 	import '../app.css'
+
 </script>
 
 <nav class=" h-15 w-7 pt-0">
@@ -19,3 +20,7 @@
 </nav>
 
 {@render children()}
+
+
+  
+
