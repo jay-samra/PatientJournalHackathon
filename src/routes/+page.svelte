@@ -3,7 +3,8 @@
     import { onMount } from 'svelte';
   
     // Declare `data` as a reactive variable
-    let data = $state<any[]>([]);
+    // let data = $state<any[]>([]);
+    let data: any[] = [];
   
     onMount(async () => {
       const { data: tableData, error } = await supabase.from('countries').select('*');
@@ -11,9 +12,11 @@
         console.error('Error fetching data:', error);
       } else {
         console.log('Fetched data:', tableData);
-        data = tableData; // This will now trigger UI updates
+        data = tableData;
       }
     });
+
+    
   </script>
   
   <h1>Supabase Data</h1>
